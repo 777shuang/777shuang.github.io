@@ -5,7 +5,7 @@ const ROWS_COUNT = 20;
 const SCREEN_WIDTH = COLS_COUNT * BLOCK_SIZE;
 const SCREEN_HEIGHT = ROWS_COUNT * BLOCK_SIZE;
 const NEXT_AREA_SIZE = BLOCK_SIZE * 5;
-const folder = "https://777shuang.web.fc2.com/tetris/images/";
+const folder = "images/";
 const BLOCK_SOURCES = [
     folder + "block-0.png",
     folder + "block-1.png",
