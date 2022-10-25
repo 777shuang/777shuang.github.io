@@ -1,4 +1,127 @@
 <!DOCTYPE html>
-<html>
-  This is test.
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GIGAポータルページ</title>
+  <style>
+    @import url(../common.css);
+    table { position: center; }
+    span { color: red; }
+    
+    #container {
+      position: relative;
+      margin: auto;
+      width: 700px;
+    }
+
+    #next-canvas {
+      position: absolute;
+      top: 0;
+      left: 400px;
+    }
+
+    #img-howto {
+      position: absolute;
+      bottom: 200px;
+      left: 360px;
+    }
+
+    #start-btn {
+      left: 400px;
+      bottom: 0;
+      width: 180px;
+      text-align: center;
+      font-size: 16px;
+      color: #FFF;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 4px;
+      background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+      transition: .5s;
+      background-size: 200%;
+    }
+
+    #pause-btn {
+      left: 400px;
+      bottom: 0;
+      width: 180px;
+      text-align: center;
+      font-size: 16px;
+      color: #FFF;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 4px;
+      background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+      transition: .5s;
+      background-size: 200%;
+    }
+
+    #start-btn:hover { background-position: right center; }
+  </style>
+</head>
+
+<body>
+  <h2>テキトーに作ってみたテトリス</h2>
+  <p>
+    webプログラミングのお勉強の一環で作りました。<br>
+    環境によってはうまく表示できないかもしれません。その場合はブラウザ側で表示する大きさを変えてください。<br>
+    <strong>
+      ※現在、スマートフォンには対応していません。<br>
+      ※Tスピン未対応です。そんな技使うやつは東大でも入れwww<br>
+    </strong>
+    Last update : 2022/04/27
+  </p>
+  <div id="howto">
+    <h3>操作方法</h3>
+    <table border="1">
+      <tr>
+        <th>動作</th>
+        <th>操作</th>
+      </tr>
+      <tr>
+        <th>左移動</th>
+        <th>←キー</th>
+      </tr>
+      <tr>
+        <th>右移動</th>
+        <th>→キー</th>
+      </tr>
+      <tr>
+        <th>下移動</th>
+        <th>↓キー</th>
+      </tr>
+      <tr>
+        <th>回転</th>
+        <th>スペースキー</th>
+      </tr>
+      <tr>
+        <th>一時停止/再開</th>
+        <th>その他の数字/アルファベットキー</th>
+      </tr>
+    </table>
+  </div>
+  <div id="container">
+    <canvas id="next-canvas"></canvas>
+    <canvas id="main-canvas"></canvas>
+    <ul>
+      <li>最後に使った技 : <span id="span">---</span></li>
+      <li>落ちたブロック : <span id="block">0</span></li>
+      <li>消したラインのスコア : <span id="line">0</span></li>
+      <li>総合スコア : <span id="score">0</span></li>
+    </ul>
+    <div>
+      <button id="start-btn">New Game</button>
+      <label style="background-color: blue;color: white;" id="state">No Game</label>
+    </div>
+  </div>
+  <a href="https://777shuang.web.fc2.com">戻る</a>
+  <script src="tetris.js"></script>
+</body>
+
 </html>
