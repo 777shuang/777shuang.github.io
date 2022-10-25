@@ -5,15 +5,14 @@ const ROWS_COUNT = 20;
 const SCREEN_WIDTH = COLS_COUNT * BLOCK_SIZE;
 const SCREEN_HEIGHT = ROWS_COUNT * BLOCK_SIZE;
 const NEXT_AREA_SIZE = BLOCK_SIZE * 5;
-const folder = "images/";
 const BLOCK_SOURCES = [
-    folder + "block-0.png",
-    folder + "block-1.png",
-    folder + "block-2.png",
-    folder + "block-3.png",
-    folder + "block-4.png",
-    folder + "block-5.png",
-    folder + "block-6.png"
+    "images/block-0.png",
+    "images/block-1.png",
+    "images/block-2.png",
+    "images/block-3.png",
+    "images/block-4.png",
+    "images/block-5.png",
+    "images/block-6.png"
 ]
 
 const state = document.getElementById("state");
@@ -222,174 +221,4 @@ class Block {
         this.y = y
 
         // 描画しないときはタイプを指定しない
-        if (type >= 0) this.setType(type)
-    }
-
-    setType(type) {
-        this.type = type
-        this.image = Asset.blockImages[type]
-    }
-
-    // Minoに属するときは、Minoの位置をオフセットに指定
-    // Fieldに属するときは、(0,0)を起点とするので不要
-    draw(offsetX = 0, offsetY = 0, ctx) {
-        let drawX = this.x + offsetX
-        let drawY = this.y + offsetY
-
-        // 画面外は描画しない
-        if (drawX >= 0 && drawX < COLS_COUNT &&
-            drawY >= 0 && drawY < ROWS_COUNT) {
-            ctx.drawImage(
-                this.image,
-                drawX * BLOCK_SIZE,
-                drawY * BLOCK_SIZE,
-                BLOCK_SIZE,
-                BLOCK_SIZE
-            )
-        }
-    }
-
-    // 次のミノを描画する
-    // タイプごとに余白を調整して、中央に表示
-    drawNext(ctx) {
-        let offsetX = 0
-        let offsetY = 0
-        switch (this.type) {
-            case 0:
-                offsetX = 0.5
-                offsetY = 0
-                break;
-            case 1:
-                offsetX = 0.5
-                offsetY = 0.5
-                break;
-            default:
-                offsetX = 1
-                offsetY = 0.5
-                break;
-        }
-
-        ctx.drawImage(
-            this.image,
-            (this.x + offsetX) * BLOCK_SIZE,
-            (this.y + offsetY) * BLOCK_SIZE,
-            BLOCK_SIZE,
-            BLOCK_SIZE
-        )
-    }
-}
-
-class Mino {
-    constructor() {
-        this.type = Math.floor(Math.random() * 7);
-        this.initBlocks()
-    }
-
-    initBlocks() {
-        let t = this.type
-        switch (t) {
-            case 0: // I型
-                this.blocks = [new Block(0, 2, t), new Block(1, 2, t), new Block(2, 2, t), new Block(3, 2, t)];
-                break;
-            case 1: // O型
-                this.blocks = [new Block(1, 1, t), new Block(2, 1, t), new Block(1, 2, t), new Block(2, 2, t)];
-                break;
-            case 2: // T型
-                this.blocks = [new Block(1, 1, t), new Block(0, 2, t), new Block(1, 2, t), new Block(2, 2, t)];
-                break;
-            case 3: // J型
-                this.blocks = [new Block(0, 1, t), new Block(0, 2, t), new Block(1, 2, t), new Block(2, 2, t)];
-                break;
-            case 4: // L型
-                this.blocks = [new Block(2, 1, t), new Block(0, 2, t), new Block(1, 2, t), new Block(2, 2, t)];
-                break;
-            case 5: // S型
-                this.blocks = [new Block(1, 1, t), new Block(2, 1, t), new Block(0, 2, t), new Block(1, 2, t)];
-                break;
-            case 6: // Z型
-                this.blocks = [new Block(0, 1, t), new Block(1, 1, t), new Block(1, 2, t), new Block(2, 2, t)];
-                break;
-        }
-    }
-
-    // フィールドに生成する
-    spawn() {
-        this.x = COLS_COUNT / 2 - 2
-        this.y = -3
-    }
-
-    // フィールドに描画する
-    draw(ctx) {
-        this.blocks.forEach(block => {
-            block.draw(this.x, this.y, ctx)
-        })
-    }
-
-    // 次のミノを描画する
-    drawNext(ctx) {
-        this.blocks.forEach(block => {
-            block.drawNext(ctx)
-        })
-    }
-
-    // 回転させる
-    rotate() {
-        this.blocks.forEach(block => {
-            let oldX = block.x
-            block.x = block.y
-            block.y = 3 - oldX
-        })
-    }
-
-    // 次に移動しようとしている位置の情報を持ったミノを生成
-    // 描画はせず、移動が可能かどうかの判定に使用する
-    getNewBlocks(moveX, moveY, rot) {
-        let newBlocks = this.blocks.map(block => {
-            return new Block(block.x, block.y)
-        })
-        newBlocks.forEach(block => {
-            // 移動させる場合
-            if (moveX || moveY) {
-                block.x += moveX
-                block.y += moveY
-            }
-
-            // 回転させる場合
-            if (rot) {
-                let oldX = block.x
-                block.x = block.y
-                block.y = 3 - oldX
-            }
-
-            // グローバル座標に変換
-            block.x += this.x
-            block.y += this.y
-        })
-
-        return newBlocks
-    }
-}
-
-class Field {
-    constructor() {
-        this.blocks = [];
-        this.count = 0;
-    }
-
-    drawFixedBlocks(ctx) { this.blocks.forEach(block => block.draw(0, 0, ctx)) }
-
-    checkLine() {
-        for (var r = 0; r < ROWS_COUNT; r++) {
-            var c = this.blocks.filter(block => block.y === r).length
-            if (c === COLS_COUNT) {
-                this.blocks = this.blocks.filter(block => block.y !== r)
-                this.blocks.filter(block => block.y < r).forEach(upper => upper.y++)
-                this.count++;
-                line += this.count;
-            }
-            else { this.count = 0; }
-        }
-    }
-
-    has(x, y) { return this.blocks.some(block => block.x == x && block.y == y) }
-}
+        if (t
