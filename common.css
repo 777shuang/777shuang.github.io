@@ -1,0 +1,43 @@
+body { background-color: aquamarine; }
+body::before
+{
+    background-color: chartreuse;
+    content: "777shuangの気分的ぶろぐ";
+    color: blue;
+    font-size: 40px;
+}
+h2
+{
+    color: #FF8700;
+}
+h1
+{
+    color: #D800FF;
+    font-size: 2em;
+    text-align: center;
+}
+h1::before
+{
+    content: "-- ";
+}
+h1::after
+{
+    content: " --";
+}
+h3
+{
+    color: black;
+    font-size: 20px;
+}
+ol
+{
+    font-size: 17px;
+}
+div.code
+{
+    background-color: white;
+}
+strong
+{
+    color: red;
+}
