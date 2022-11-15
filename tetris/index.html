@@ -67,57 +67,59 @@
 </head>
 
 <body>
-  <h2>テキトーに作ってみたテトリス</h2>
-  <p>
-    webプログラミングのお勉強の一環で作りました。<br>
-    環境によってはうまく表示できないかもしれません。その場合はブラウザ側で表示する大きさを変えてください。<br>
-    <strong>
-      ※現在、スマートフォンには対応していません。<br>
-      ※Tスピン未対応です。<br>
-    </strong>
-    Last update : 2022/11/15
-  </p>
-  <div id="howto">
-    <h3>操作方法</h3>
-    <table border="1">
-      <tr>
-        <th>動作</th>
-        <th>操作</th>
-      </tr>
-      <tr>
-        <th>左移動</th>
-        <th>←キー</th>
-      </tr>
-      <tr>
-        <th>右移動</th>
-        <th>→キー</th>
-      </tr>
-      <tr>
-        <th>下移動</th>
-        <th>↓キー</th>
-      </tr>
-      <tr>
-        <th>回転</th>
-        <th>スペースキー</th>
-      </tr>
-      <tr>
-        <th>一時停止/再開</th>
-        <th>その他の数字/アルファベットキー</th>
-      </tr>
-    </table>
-  </div>
-  <div id="main">
-    <canvas id="next-canvas"></canvas>
-    <canvas id="main-canvas"></canvas>
-    <ul>
-      <li>最後に使った技 : <span id="span">---</span></li>
-      <li>落ちたブロック : <span id="block">0</span></li>
-      <li>消したラインのスコア : <span id="line">0</span></li>
-      <li>総合スコア : <span id="score">0</span></li>
-    </ul>
-    <div>
-      <button id="start-btn">New Game</button>
-      <label style="background-color: blue;color: white;" id="state">No Game</label>
+  <div id=main>
+    <h2>テキトーに作ってみたテトリス</h2>
+    <p>
+      webプログラミングのお勉強の一環で作りました。<br>
+      環境によってはうまく表示できないかもしれません。その場合はブラウザ側で表示する大きさを変えてください。<br>
+      <strong>
+        ※現在、スマートフォンには対応していません。<br>
+        ※Tスピン未対応です。<br>
+      </strong>
+      Last update : 2022/11/15
+    </p>
+    <div id="howto">
+      <h3>操作方法</h3>
+      <table border="1">
+        <tr>
+          <th>動作</th>
+          <th>操作</th>
+        </tr>
+        <tr>
+          <th>左移動</th>
+          <th>←キー</th>
+        </tr>
+        <tr>
+          <th>右移動</th>
+          <th>→キー</th>
+        </tr>
+        <tr>
+          <th>下移動</th>
+          <th>↓キー</th>
+        </tr>
+        <tr>
+          <th>回転</th>
+          <th>スペースキー</th>
+        </tr>
+        <tr>
+          <th>一時停止/再開</th>
+          <th>その他の数字/アルファベットキー</th>
+        </tr>
+      </table>
+    </div>
+    <div id="contener">
+      <canvas id="next-canvas"></canvas>
+      <canvas id="main-canvas"></canvas>
+      <ul>
+        <li>最後に使った技 : <span id="span">---</span></li>
+        <li>落ちたブロック : <span id="block">0</span></li>
+        <li>消したラインのスコア : <span id="line">0</span></li>
+        <li>総合スコア : <span id="score">0</span></li>
+      </ul>
+      <div>
+        <button id="start-btn">New Game</button>
+        <label style="background-color: blue;color: white;" id="state">No Game</label>
+      </div>
     </div>
   </div>
   <script src=https://777shuang.github.io/common.js></script>
