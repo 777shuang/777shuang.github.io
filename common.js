@@ -1,6 +1,6 @@
 const before = `<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3 p-0">
             <div class="container-fluid">
-                <img class="navbar-brand" src="https://777shuang.github.io/777shuang.png" width="64px">
+                <a href=https://777shuang.github.io/logo.html><img class="navbar-brand" src="https://777shuang.github.io/777shuang.png" width="64px"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
                     aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
