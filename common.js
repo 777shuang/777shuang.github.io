@@ -1,4 +1,4 @@
-var beforestr = `<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3 p-0">
+document.getElementById("main").insertAdjacentHTML("beforebegin",`<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3 p-0">
             <div class="container-fluid">
                 <a href=https://777shuang.github.io/logo.html><img class="navbar-brand" src="https://777shuang.github.io/777shuang.png" width="64px"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
@@ -19,8 +19,5 @@ var beforestr = `<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3 p-
                     </ul>
                 </div>
             </div>
-        </nav>`
-var afterstr = "<footer><strong>Copylighit (c) 2022 777shuang. All Rights Reserved.</strong></footer>"
-var main = document.getElementById("main")
-main.insertAdjacentHTML("beforebegin",beforestr);
-main.insertAdjacentHTML("afterend",afterstr);
+        </nav>`);
+document.getElementById("main").insertAdjacentHTML("afterend","<footer><strong>Copylighit (c) 2022 777shuang. All Rights Reserved.</strong></footer>");
