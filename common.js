@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
 document.getElementById("main").insertAdjacentHTML("beforebegin",`<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3 p-0">
             <div class="container-fluid">
                 <a href=https://777shuang.github.io/logo.html><img class="navbar-brand" src="https://777shuang.github.io/777shuang.png" width="64px"></a>
@@ -21,3 +22,4 @@ document.getElementById("main").insertAdjacentHTML("beforebegin",`<nav class="na
             </div>
         </nav>`);
 document.getElementById("main").insertAdjacentHTML("afterend","<footer><strong>Copylighit (c) 2022 777shuang. All Rights Reserved.</strong></footer>");
+});
