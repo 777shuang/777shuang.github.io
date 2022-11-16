@@ -11,13 +11,10 @@ const before = `<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3 p-0
                             <a class="nav-link active" aria-current="page" href="https://777shuang.github.io/index.html">ホーム</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="https://777shuang.github.io/edufiles/index.html">教育用ファイル</a>
+                            <a class="nav-link" aria-current="page" href="https://777shuang.github.io/edufiles/index.html">自己紹介</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="https://sites.google.com/view/777shuang/%E3%83%9B%E3%83%BC%E3%83%A0">ぶろぐ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="https://777shuang.github.io/tetris/index.html">なぜか人気のテトリス</a>
                         </li>
                     </ul>
                 </div>
