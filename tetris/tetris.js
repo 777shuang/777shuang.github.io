@@ -1,11 +1,8 @@
-const GAME_SPEED = 300;
-const BLOCK_SIZE = 20;
-const COLS_COUNT = 10;
-const ROWS_COUNT = 20;
-const SCREEN_WIDTH = COLS_COUNT * BLOCK_SIZE;
-const SCREEN_HEIGHT = ROWS_COUNT * BLOCK_SIZE;
-const NEXT_AREA_SIZE = BLOCK_SIZE * 5;
-const BLOCK_SOURCES = [
+var GAME_SPEED = 300 , BLOCK_SIZE = 20;
+var COLS_COUNT = 10 , ROWS_COUNT = 20;
+var SCREEN_WIDTH = COLS_COUNT * BLOCK_SIZE , SCREEN_HEIGHT = ROWS_COUNT * BLOCK_SIZE;
+var NEXT_AREA_SIZE = BLOCK_SIZE * 5;
+var BLOCK_SOURCES = [
     "images/block-0.png",
     "images/block-1.png",
     "images/block-2.png",
@@ -15,7 +12,7 @@ const BLOCK_SOURCES = [
     "images/block-6.png"
 ]
 
-const state = document.getElementById("state");
+var state = document.getElementById("state");
 var block , line , score;
 
 window.onload = function ()
