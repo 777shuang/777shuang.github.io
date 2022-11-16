@@ -1,4 +1,4 @@
-const before = `<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3 p-0">
+const beforestr = `<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3 p-0">
             <div class="container-fluid">
                 <a href=https://777shuang.github.io/logo.html><img class="navbar-brand" src="https://777shuang.github.io/777shuang.png" width="64px"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
@@ -20,7 +20,7 @@ const before = `<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3 p-0
                 </div>
             </div>
         </nav>`
-const after = "<footer><strong>Copylighit (c) 2022 777shuang. All Rights Reserved.</strong></footer>"
+const afterstr = "<footer><strong>Copylighit (c) 2022 777shuang. All Rights Reserved.</strong></footer>"
 const main = document.getElementById("main")
-main.insertAdjacentHTML("beforebegin",before);
-main.insertAdjacentHTML("afterend",after);
+main.insertAdjacentHTML("beforebegin",beforestr);
+main.insertAdjacentHTML("afterend",afterstr);
