@@ -23,4 +23,7 @@ const before = `<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3 p-0
                 </div>
             </div>
         </nav>`
-document.getElementById("main").insertAdjacentHTML("beforebegin",before);
+const after = "<footer><strong>Copylighit (c) 2022 777shuang. All Rights Reserved.</strong></footer>"
+const main = document.getElementById("main")
+main.insertAdjacentHTML("beforebegin",before);
+main.insertAdjacentHTML("afterrest",after);
