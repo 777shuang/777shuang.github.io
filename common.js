@@ -20,7 +20,5 @@ var beforestr = `<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3 p-
                 </div>
             </div>
         </nav>`;
-var userAgent = window.navigator.userAgent.toLowerCase();
-if(userAgent.indexOf("edge") == -1 && userAgent.indexOf("chrome") != -1) { beforestr += "<strong>Google Chrome だと表示がバグるかも。どうにかならんもんかね</strong>" }
 document.getElementById("main").insertAdjacentHTML("beforebegin",beforestr);
 document.getElementById("main").insertAdjacentHTML("afterend","<footer><strong>Copylighit (c) 2022 777shuang. All Rights Reserved.</strong></footer>");
