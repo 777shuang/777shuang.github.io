@@ -1,0 +1,3 @@
+[submodule "illwill"]
+	path = illwill
+	url = https://github.com/johnnovak/illwill
