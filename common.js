@@ -21,4 +21,4 @@ var beforestr = `
   </div>
 </nav>`;
 document.getElementById("main").insertAdjacentHTML("beforebegin",beforestr);
-document.getElementById("main").insertAdjacentHTML("afterend","<footer><strong>Copyrighit (c) 2022 777shuang. All Rights Reserved.</strong></footer>");
+document.getElementById("main").insertAdjacentHTML("afterend","<footer><strong>Copyright (c) 2022 777shuang. All Rights Reserved.</strong></footer>");
