@@ -20,5 +20,9 @@ var beforestr = `
     </div>
   </div>
 </nav>`;
+var afterstr = `<footer>
+Last Update : 2022/1/4<br>
+<strong>Copyright (c) 2022 - 2023 777shuang. All Rights Reserved.</strong>
+</footer>`
 document.getElementById("main").insertAdjacentHTML("beforebegin",beforestr);
-document.getElementById("main").insertAdjacentHTML("afterend","<footer><strong>Copyright (c) 2022 777shuang. All Rights Reserved.</strong></footer>");
+document.getElementById("main").insertAdjacentHTML("afterend",afterstr);
