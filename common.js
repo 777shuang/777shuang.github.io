@@ -21,7 +21,7 @@ var beforestr = `
   </div>
 </nav>`;
 var afterstr = `<footer>
-Last Update : 2023/1/15<br>
+Last Update : 2023/2/10<br>
 <strong>Copyright (c) 2022 - 2023 777shuang. All Rights Reserved.</strong>
 </footer>`
 document.getElementById("main").insertAdjacentHTML("beforebegin",beforestr);
