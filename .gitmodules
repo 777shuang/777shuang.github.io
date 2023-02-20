@@ -1,3 +1,6 @@
 [submodule "illwill"]
 	path = illwill
 	url = https://github.com/johnnovak/illwill
+[submodule "nimtranslate2"]
+	path = nimtranslate2
+	url = https://github.com/777shuang/nimtranslate2
