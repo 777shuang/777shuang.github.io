@@ -22,7 +22,7 @@ var beforestr = `
 </nav>`;
 var afterstr = `<footer>
 since : 2022/10/16<br>
-last : 2023/2/16<br>
+last : 2023/3/9<br>
 <strong>Copyright (c) 2022 - 2023 777shuang. All Rights Reserved.</strong>
 </footer>`
 document.getElementById("main").insertAdjacentHTML("beforebegin",beforestr);
