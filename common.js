@@ -21,6 +21,7 @@ var beforestr = `
   </div>
 </nav>`;
 var afterstr = `<footer>
+<strong><a href=https://777shuang.github.io/index.html>戻る</a></strong><br><br>
 since : 2022/10/16<br>
 last : 2023/3/13<br>
 <strong>Copyright (c) 2022 - 2023 777shuang. All Rights Reserved.</strong>
