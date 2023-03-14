@@ -4,6 +4,3 @@
 [submodule "nimtranslate2"]
 	path = nimtranslate2
 	url = https://github.com/777shuang/nimtranslate2
-[submodule "nimx"]
-	path = nimx
-	url = https://github.com/yglukhov/nimx
