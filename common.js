@@ -14,7 +14,7 @@ var beforestr = `
           <a class="nav-link" aria-current="page" href="https://scrapbox.io/777shuang/">西方見聞録</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="https://sites.google.com/view/777shuang/%E3%83%9B%E3%83%BC%E3%83%A0">ぶろぐ</a>
+          <a class="nav-link" aria-current="page" href="https://777shuang.github.io/blog/index.html">ぶろぐ</a>
         </li>
       </ul>
     </div>
