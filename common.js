@@ -1,7 +1,7 @@
 var beforestr = `
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3 p-0">
   <div class="container-fluid">
-    <a href=https://777shuang.github.io/logo.html><img class="navbar-brand" src="https://777shuang.github.io/777shuang.png" width="64px"></a>
+    <a href=/logo.html><img class="navbar-brand" src="/assets/777shuang.png" width="64px"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -22,7 +22,7 @@ var beforestr = `
 </nav>`;
 var afterstr = `<footer>
 <strong><a href=/index.html>戻る</a></strong><br><br>
-<a href="https://sites.google.com/site/happybusy/"><img src="/busy_banner.png"></a>
+<a href="https://sites.google.com/site/happybusy/"><img src="/assets/busy_banner.png"></a>
 since : 2022/10/16 <strong>|</strong> last : 2023/3/19<br>
 <strong>Copyright (c) 2022 - 2023 777shuang. All Rights Reserved.</strong>
 </footer>`
