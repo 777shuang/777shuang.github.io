@@ -20,10 +20,6 @@ img
 {
     padding: 10px;
 }
-h2
-{
-    color: #FF8700;
-}
 h1
 {
     color: #D800FF;
@@ -38,10 +34,15 @@ h1::after
 {
     content: " --";
 }
+h2
+{
+    color: #FF8700;
+    font-size: 1.7em;
+}
 h3
 {
-    color: black;
-    font-size: 20px;
+    color: gray;
+    font-size: 1.5em;
 }
 ol
 {
