@@ -1,1 +1,1 @@
-document.getElementById("main").insertAdjacentHTML("beforebegin" , `<h1><a href=/index.html>777shuangの気分的ぶろぐ</a></h1>`);
+document.getElementById("main").insertAdjacentHTML("beforebegin" , `<h1><a href=/blog/index.html>777shuangの気分的ぶろぐ</a></h1>`);
