@@ -17,7 +17,7 @@
 				</menu>
 			</section>
 			<article role="tabpanel">
-				<div id="main">
+				<div class="main">
 					<h1>777shuangの気分的ぶろぐ</h1>
 					<del>自分のページだと広告を入れる気になれば入れれるんで</del>他のサービスは使わずにHTML直書きです
 					<ul class="tree-view">
@@ -29,9 +29,9 @@
 										<details>
 											<summary>3月</summary>
 											<ul>
-												<li><a href="2023/3/14.html">14日</a></li>
-												<li><a href="2023/3/15.html">15日</a></li>
-												<li><a href="2023/3/19.html">19日</a></li>
+												<li><a href="javascript:void(0)" onclick="show(2023,3,14)">14日</a></li>
+												<li><a href="javascript:void(0)" onclick="show(2023,3,15)">15日</a></li>
+												<li><a href="javascript:void(0)" onclick="show(2023,3,19)">19日</a></li>
 											</ul>
 										</details>
 									</li>
@@ -39,10 +39,30 @@
 							</details>
 						</li>
 					</ul>
+					<div id="blog"></div>
 				</div>
-				<div id="blog"></div>
 			</article>
 		</div>
 		<script src=/common.js></script>
+		<script>
+			function show(year, month, day)
+			{
+				const http = new XMLHttpRequest();
+				const url = "/blog/" + year + '/' + month + '/' + day + ".html";
+				console.log(url);
+				http.open("GET", url);
+				http.send();
+				http.onreadystatechange = function()
+				{
+					if (this.readyState == 4)
+					{
+						var text;
+						if (this.status == 200) { text = http.responseText; }
+						else { text = "読み込みに失敗しました"; }
+						document.getElementById("blog").innerHTML = '<h2>' + year + "年 " + month + "月 " + day + "日" + '</h2>' + text;
+					}
+				}
+			}
+		</script>
 	</body>
 </html>
