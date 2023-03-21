@@ -1,29 +1,9 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css");
-body { background-color: aquamarine; }
-div#body
-{
-    padding: 25px;
-    max-width: 60%;
-    margin: auto auto;
-}
-div.container-fluid
-{
-    padding-left: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-li.nav-item
-{
-    padding-right: 25px;
-}
-img
-{
-    padding: 10px;
-}
+@import "https://unpkg.com/xp.css";
+body { background-color: #5080ff; }
+div.window { background-color: aquamarine; }
 h1
 {
     color: #D800FF;
-    font-size: 2em;
     text-align: center;
 }
 h1::before
@@ -37,16 +17,10 @@ h1::after
 h2
 {
     color: #FF8700;
-    font-size: 1.7em;
 }
 h3
 {
     color: gray;
-    font-size: 1.5em;
-}
-ol
-{
-    font-size: 17px;
 }
 div.code
 {
