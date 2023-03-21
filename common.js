@@ -16,6 +16,8 @@ body.innerHTML = `
     <footer>
       <strong><a href=/index.html>ホームへ戻る</a></strong>
       <br>
+      このサイトは<a href="https://botoxparty.github.io/XP.css/" id="link" target="_blank">XP.css</a>を使って作られています。<button id="changeCSS-button" onclick="changeCSS()">Win98風に</button>
+      <br>
       <a href="https://sites.google.com/site/happybusy/"><img src="/assets/busy_banner.png" height="64px"></a>
       <a href="https://moe-counter.glitch.me/"><img src="https://count.getloli.com/get/@777shuang" height="64px"></a>
       <br>
@@ -43,4 +45,25 @@ function Restore()
   (document.exitFullscreen || document.mozCancelFullScreen || document.webkitExitFullscreen || document.msExitFullscreen).call(document);
   document.getElementById("titlebar_button").ariaLabel = "Maximize";
   document.getElementById("titlebar_button").onclick = Maximize
+}
+function changeCSS()
+{
+  const xp = document.getElementById("xp") , _98 = document.getElementById("98");
+  const button = document.getElementById("changeCSS-button") , link = document.getElementById("link");
+  if (xp.disabled == false)
+  {
+    xp.disabled = true;
+    _98.disabled = false;
+    button.innerHTML = "WinXP風に";
+    link.href = "https://jdan.github.io/98.css/";
+    link.innerText = "98.css";
+  }
+  else
+  {
+    xp.disabled = false;
+    _98.disabled = true;
+    button.innerHTML = "Win98風に";
+    link.href = "https://botoxparty.github.io/XP.css/";
+    link.innerText = "XP.css";
+  }
 }
