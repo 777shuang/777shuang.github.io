@@ -1,3 +1,17 @@
+@font-face {
+    font-family: "Pixelated MS Sans Serif";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/assets/JF-Dot-Shinonome16.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Pixelated MS Sans Serif";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/assets/JF-Dot-Shinonome16B.ttf") format("truetype");
+}
+
 body
 {
     background-color: #5080ff;
