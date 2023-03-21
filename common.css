@@ -1,35 +1,21 @@
-body { background-color: #5080ff; }
+body
+{
+    background-color: #5080ff;
+}
 #main { background-color: aquamarine; }
 h1
 {
     color: #D800FF;
     text-align: center;
 }
-h1::before
+h1::before { content: "-- "; }
+h1::after { content: " --"; }
+h2 { color: #FF8700; }
+h3 { color: gray; }
+strong { color: red; }
+footer { text-align: center; }
+summary
 {
-    content: "-- ";
-}
-h1::after
-{
-    content: " --";
-}
-h2
-{
-    color: #FF8700;
-}
-h3
-{
-    color: gray;
-}
-strong
-{
-    color: red;
-}
-footer
-{
-    text-align: center;
-}
-summary {
     user-select: none;
     cursor: pointer;
     display: inline;
