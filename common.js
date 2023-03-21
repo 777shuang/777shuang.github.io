@@ -16,7 +16,7 @@ body.innerHTML = `
     <footer>
       <strong><a href=/index.html>ホームへ戻る</a></strong>
       <br>
-      このサイトは<a href="https://botoxparty.github.io/XP.css/" id="link" target="_blank">XP.css</a>を使って作られています。<button id="changeCSS-button" onclick="changeCSS()">Win98風に</button>
+      このサイトは<a href="https://botoxparty.github.io/XP.css/" id="link" target="_blank">XP.css</a>を使って作られています。<button id="changeCSS-button" onclick="changeCSS()">Win98風にする</button>
       <br>
       <a href="https://sites.google.com/site/happybusy/"><img src="/assets/busy_banner.png" height="64px"></a>
       <a href="https://moe-counter.glitch.me/"><img src="https://count.getloli.com/get/@777shuang" height="64px"></a>
@@ -54,7 +54,7 @@ function changeCSS()
   {
     xp.disabled = true;
     _98.disabled = false;
-    button.innerHTML = "WinXP風に";
+    button.innerHTML = "WinXP風にする";
     link.href = "https://jdan.github.io/98.css/";
     link.innerText = "98.css";
   }
@@ -62,7 +62,7 @@ function changeCSS()
   {
     xp.disabled = false;
     _98.disabled = true;
-    button.innerHTML = "Win98風に";
+    button.innerHTML = "Win98風にする";
     link.href = "https://botoxparty.github.io/XP.css/";
     link.innerText = "XP.css";
   }

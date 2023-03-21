@@ -21,6 +21,7 @@ h1
 {
     color: #D800FF;
     text-align: center;
+    font-size: 4em;
 }
 h1::before { content: "-- "; }
 h1::after { content: " --"; }
@@ -34,3 +35,4 @@ summary
     cursor: pointer;
     display: inline;
 }
+div { font-size: 1.2em; }
