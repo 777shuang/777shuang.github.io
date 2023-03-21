@@ -3,58 +3,70 @@
 	<head>
 		<META charset=utf-8>
 		<LINK rel=stylesheet href=/common.css>
+		<link rel="stylesheet" href="https://unpkg.com/xp.css@/dist/98.css" disabled=true id='style-98' />
+		<link rel="stylesheet" href="https://unpkg.com/xp.css" id='style-xp' />
 		<title>777shuangについて</title>
 	</head>
 	<body>
-		<div id=main>
-			<h1>管理人について</h1>
-			<ol>
-				<li id=連絡先>
-					<h2>連絡先</h2>
-					なかなか返信とかできないかもですけど悪しからず。
-					<ul>
-						<li><a href=https://discord.com>Discord</a> : 777shuang#9544 (<a href=https://discord.gg/zaBAvz8WvV>自鯖</a>)</li>
-						<li><a href=https://github.com>Github</a> : <a href=https://github.com/777shuang>777shuang</a></li>
-						<li><a href=https://gmail.com>GMail</a> : shuang777gm@gmail.com</li>
-						<li><a href=https://outlook.live.com>Outlook</a> : shuang777@outlook.jp</li>
-					</ul>
-				</li>
-				<li id=諸々>
-					<h2>諸々</h2>
-					<ul>
-						<li>
-							所属団体
+		<div class="window-body">
+			<menu role="tablist">
+				<button role="tab" onclick="location.href='/index.html'">ホーム</button>
+				<button role="tab" aria-selected="true" >777shuangについて</button>
+				<button role="tab" onclick="location.href='/blog/index.html'">ぶろぐ</button>
+			</menu>
+			<article role="tabpanel">
+				<div id=main>
+					<h1>管理人について</h1>
+					<ol>
+						<li id=連絡先>
+							<h2>連絡先</h2>
+							なかなか返信とかできないかもですけど悪しからず。
 							<ul>
-								<li><a href=https://github.com/brain-hackers/README>Brain Hackers</a></li>
-								<li><a href="https://genkaisoft.github.io/">限界そふと</a></li>
+								<li><a href=https://discord.com>Discord</a> : 777shuang#9544 (<a href=https://discord.gg/zaBAvz8WvV>自鯖</a>)</li>
+								<li><a href=https://github.com>Github</a> : <a href=https://github.com/777shuang>777shuang</a></li>
+								<li><a href=https://gmail.com>GMail</a> : shuang777gm@gmail.com</li>
+								<li><a href=https://outlook.live.com>Outlook</a> : shuang777@outlook.jp</li>
 							</ul>
 						</li>
-						<li>プログラム言語はNim派(以下、できるプログラム言語)
+						<li id=諸々>
+							<h2>諸々</h2>
 							<ul>
-								<li>C</li>
-								<li>C++</li>
-								<li>Nim</li>
-								<li>JavaScript</li>
-								<li>MortScript</li>
-								<li>ZenScript</li>
+								<li>
+									所属団体
+									<ul>
+										<li><a href=https://github.com/brain-hackers/README>Brain Hackers</a></li>
+										<li><a href="https://genkaisoft.github.io/">限界そふと</a></li>
+									</ul>
+								</li>
+								<li>プログラム言語はNim派(以下、できるプログラム言語)
+									<ul>
+										<li>C</li>
+										<li>C++</li>
+										<li>Nim</li>
+										<li>JavaScript</li>
+										<li>MortScript</li>
+										<li>ZenScript</li>
+									</ul>
+								</li>
+								<li>コンソールテキストエディタは<strong>nano</strong>派です。</li>
 							</ul>
 						</li>
-						<li>コンソールテキストエディタは<strong>nano</strong>派です。</li>
-					</ul>
-				</li>
-				<li id="バナー">
-					<h2>バナー</h2>
-					<a href=/assets/banner.png target="_blank"><IMG src=/assets/banner.png height="128px"></a>
-					この画像、サイズが半端ないと言われた。<del>知るかそんなもん</del><br>
-					リンク貼るときに使ってね
-				</li>
-				<li id=由来>
-					<h2>ユーザー名の由来</h2>
-					結構訊かれるんで書いとこ。<br>
-					「shuang」は「爽」のピンインです。僕はアイスの爽が(バニラ味を除き)大好きなんで<br>
-					「777」は適当です。バナーの777号は後付けっす
-				</li>
-			</ol>
+						<li id="バナー">
+							<h2>バナー</h2>
+							<a href=/assets/banner.png target="_blank"><IMG src=/assets/banner.png height="128px"></a>
+							この画像、サイズが半端ないと言われた。<del>知るかそんなもん</del>
+							<br>
+							リンク貼るときに使ってね
+						</li>
+						<li id=由来>
+							<h2>ユーザー名の由来</h2>
+							結構訊かれるんで書いとこ。<br>
+							「shuang」は「爽」のピンインです。僕はアイスの爽が(バニラ味を除き)大好きなんで<br>
+							「777」は適当です。バナーの777号は後付けっす
+						</li>
+					</ol>
+				</div>
+			</article>
 		</div>
 		<script src=/common.js defer></script>
 	</body>

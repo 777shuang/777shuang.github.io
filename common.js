@@ -1,4 +1,8 @@
-document.getElementById("main").innerHTML = `
+document.querySelector("html").setAttribute("lang" , "ja");
+
+const body = document.body;
+
+body.innerHTML = `
   <div class="window">
     <div class="title-bar">
       <div class="title-bar-text">777shuangの気分的ページ</div>
@@ -8,7 +12,7 @@ document.getElementById("main").innerHTML = `
         <button aria-label="Close" onclick="window.close()"></button>
       </div>
     </div>
-` + document.getElementById("main").innerHTML + `
+` + body.innerHTML + `
     <footer>
       <strong><a href=/index.html>ホームへ戻る</a></strong>
       <br>
@@ -20,7 +24,6 @@ document.getElementById("main").innerHTML = `
     </footer>
   </div>
 `
-const main = document.querySelector("#main");
 
 function Maximize()
 {
@@ -28,8 +31,8 @@ function Maximize()
   { window.alert("フルスクリーンに対応していません"); }
   else
   {
-    let reqFullScreen = main.requestFullscreen || main.mozRequestFullScreen || main.webkitRequestFullScreen || main.msRequestFullscreen;
-    reqFullScreen.call(main);
+    let reqFullScreen = body.requestFullscreen || body.mozRequestFullScreen || body.webkitRequestFullScreen || body.msRequestFullscreen;
+    reqFullScreen.call(body);
     document.getElementById("titlebar_button").ariaLabel = "Restore";
     document.getElementById("titlebar_button").onclick = Restore;
   }

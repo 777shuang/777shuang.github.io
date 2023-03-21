@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=ja>
+<html>
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="/common.css" />
@@ -7,56 +7,69 @@
 		<link rel="stylesheet" href="https://unpkg.com/xp.css" id='style-xp' />
 		<title>777shuangの気分的ページ[ﾎｰﾑ]</title>
 	</head>
-	<body id=main>
-		<strong>
-			当サイトはHTML5/EMCAScript6に準拠したブラウザで閲覧することを前提に作られています。<br>
-			それ以外のブラウザで表示される内容では著作権表示などの重要な情報が欠落するおそれがあります。<br>
-			要するに、
-			<a href=https://www.microsoft.com/ja-jp/edge target="_blank">Microsoft Edge</a>とか
-			<a href="https://www.google.com/intl/ja_jp/chrome/" target="_blank">Google Chrome</a>とか
-			<a href="https://www.mozilla.org/ja-jp/firefox/new/" target="_blank">Mozilla Firefox</a>とかで見ろ、ということです。
-		</strong>
-		<h1 id="top">777shuangの気分的ページ [ホーム]</h1>
-		<h2>リンク</h2>
-		<ul>
-			<li><a href=/aboutme.html>管理人について</a> - お前誰だよと思ったあなたへ。</li>
-			<li><strong><a href=/edufiles/index.html>落書き集</a></strong> - お勉強に役立つ...かもね</li>
-			<li><a href=/tetris/index.html>自作テトリス</a> - なんか人気になってるですねえ</li>
-			<li><a href=https://scrapbox.io/777shuang target="_blank">西方見聞録</a> - 欧米発祥の電子計算機についての見聞を纏めた書物であります</li>
-		</ul>
-		<h2>盟友(自称)</h2>
-		<ul>
-			<li>
-				<h3>相互リンク</h3>
-				<ul>
-					<li><a href="https://yanknvim.netlify.app/" target="_blank"><img src="https://yanknvim.netlify.app/assets/img/banner.png" height="64px" alt="yank.nvim"></a></li>
-					<li><a href="https://ajinori.f5.si/" target="_blank"><IMG src="https://ajinori.f5.si/img/banner.png" height="64px" alt="味付け海苔"></a></li>
-				</ul>
-			</li>
-			<li>
-				<h3>勝手リンク</h3>
-				<ul>
-					<li>
-						<a href="https://gbudou.ml/" target="_blank">
-							ぶどぶどう
-							<img src="https://gbudou.ml/budou256.png" height="64px">
-						</a>
-					</li>
-					<li>
-						<a href="http://tmksoft.net/index.html" target="_blank">
-							TMK
-							<IMG src="/assets/mikamikan.jpg" height="64px">
-						</a>
-					</li>
-					<li>
-						<a href="https://nekokawa.net/index.html" target="_blank">
-							猫川七海
-							<img src="http://nekokawa.net/icon.jpg" height="64px">
-						</a>
-					</li>
-				</ul>
-			</li>
-		</ul>
+	<body>
+		<div class="window-body">
+			<section class="tabs" style="max-width: 500px">
+				<menu role="tablist">
+					<button role="tab" aria-selected="true">ホーム</button>
+					<button role="tab" onclick="location.href='/aboutme.html'" >777shuangについて</button>
+					<button role="tab" onclick="location.href='/blog/index.html'">ぶろぐ</button>
+				</menu>
+			</section>
+			<article role="tabpanel">
+				<div id="main">
+					<strong>
+						当サイトはHTML5/EMCAScript6に準拠したブラウザで閲覧することを前提に作られています。<br>
+						それ以外のブラウザで表示される内容では著作権表示などの重要な情報が欠落するおそれがあります。<br>
+						要するに、
+						<a href=https://www.microsoft.com/ja-jp/edge target="_blank">Microsoft Edge</a>とか
+						<a href="https://www.google.com/intl/ja_jp/chrome/" target="_blank">Google Chrome</a>とか
+						<a href="https://www.mozilla.org/ja-jp/firefox/new/" target="_blank">Mozilla Firefox</a>とかで見ろ、ということです。
+					</strong>
+					<h1 id="top">777shuangの気分的ページ [ホーム]</h1>
+					<h2>リンク</h2>
+					<ul>
+						<li><a href=/aboutme.html>管理人について</a> - お前誰だよと思ったあなたへ。</li>
+						<li><strong><a href=/edufiles/index.html>落書き集</a></strong> - お勉強に役立つ...かもね</li>
+						<li><a href=/tetris/index.html>自作テトリス</a> - なんか人気になってるですねえ</li>
+						<li><a href=https://scrapbox.io/777shuang target="_blank">西方見聞録</a> - 欧米発祥の電子計算機についての見聞を纏めた書物であります</li>
+					</ul>
+					<h2>盟友(自称)</h2>
+					<ul>
+						<li>
+							<h3>相互リンク</h3>
+							<ul>
+								<li><a href="https://yanknvim.netlify.app/" target="_blank"><img src="https://yanknvim.netlify.app/assets/img/banner.png" height="64px" alt="yank.nvim"></a></li>
+								<li><a href="https://ajinori.f5.si/" target="_blank"><IMG src="https://ajinori.f5.si/img/banner.png" height="64px" alt="味付け海苔"></a></li>
+							</ul>
+						</li>
+						<li>
+							<h3>勝手リンク</h3>
+							<ul>
+								<li>
+									<a href="https://gbudou.ml/" target="_blank">
+										ぶどぶどう
+										<img src="https://gbudou.ml/budou256.png" height="64px">
+									</a>
+								</li>
+								<li>
+									<a href="http://tmksoft.net/index.html" target="_blank">
+										TMK
+										<IMG src="/assets/mikamikan.jpg" height="64px">
+									</a>
+								</li>
+								<li>
+									<a href="https://nekokawa.net/index.html" target="_blank">
+										猫川七海
+										<img src="http://nekokawa.net/icon.jpg" height="64px">
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>	
+				</div>
+			</article>
+		</div>
 		<script src=/common.js></script>
 	</body>
 </html>

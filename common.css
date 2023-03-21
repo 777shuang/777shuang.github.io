@@ -1,6 +1,5 @@
-@import "https://unpkg.com/xp.css";
 body { background-color: #5080ff; }
-div.window { background-color: aquamarine; }
+#main { background-color: aquamarine; }
 h1
 {
     color: #D800FF;
@@ -22,10 +21,6 @@ h3
 {
     color: gray;
 }
-div.code
-{
-    background-color: white;
-}
 strong
 {
     color: red;
@@ -33,4 +28,9 @@ strong
 footer
 {
     text-align: center;
+}
+summary {
+    user-select: none;
+    cursor: pointer;
+    display: inline;
 }

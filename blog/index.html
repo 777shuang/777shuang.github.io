@@ -3,28 +3,45 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="/common.css" />
+		<link rel="stylesheet" href="https://unpkg.com/xp.css@/dist/98.css" disabled=true id='style-98' />
+		<link rel="stylesheet" href="https://unpkg.com/xp.css" id='style-xp' />
 		<title>777shuangの気分的ぶろぐ</title>
 	</head>
 	<body>
-		<div id=main>
-			<del>自分のページだと広告を入れる気になれば入れれるんで</del>他のサービスは使わずにHTML直書きです
-			<ul>
-				<li>
-					<a href="2023/index.html">2023年</a>
-					<ul>
+		<div class="window-body">
+			<section class="tabs" style="max-width: 500px">
+				<menu role="tablist">
+					<button role="tab" onclick="location.href='/index.html'">ホーム</button>
+					<button role="tab" onclick="location.href='/aboutme.html'" >777shuangについて</button>
+					<button role="tab" aria-selected="true" >ぶろぐ</button>
+				</menu>
+			</section>
+			<article role="tabpanel">
+				<div id="main">
+					<del>自分のページだと広告を入れる気になれば入れれるんで</del>他のサービスは使わずにHTML直書きです
+					<ul class="tree-view">
 						<li>
-							<a href="2023/3/index.html">3月</a>
-							<ul>
-								<li><a href="2023/3/14.html">14日</a></li>
-								<li><a href="2023/3/15.html">15日</a></li>
-								<li><a href="2023/3/19.html">19日</a></li>
-							</ul>
+							<details open>
+								<summary>2023年</summary>
+								<ul>
+									<li>
+										<details>
+											<summary>3月</summary>
+											<ul>
+												<li><a href="2023/3/14.html">14日</a></li>
+												<li><a href="2023/3/15.html">15日</a></li>
+												<li><a href="2023/3/19.html">19日</a></li>
+											</ul>
+										</details>
+									</li>
+								</ul>
+							</details>
 						</li>
 					</ul>
-				</li>
-			</ul>
+				</div>
+				<div id="blog"></div>
+			</article>
 		</div>
 		<script src=/common.js></script>
-		<script src=/blog/blog.js></script>
 	</body>
 </html>
