@@ -98,18 +98,28 @@
             </tr>
           </table>
         </div>
-        <div id="contener">
-          <canvas id="next-canvas"></canvas>
-          <canvas id="main-canvas"></canvas>
-          <ul>
-            <li>最後に使った技 : <strong id="strong">---</strong></li>
-            <li>落ちたブロック : <strong id="block">0</strong></li>
-            <li>消したラインのスコア : <strong id="line">0</strong></li>
-            <li>総合スコア : <strong id="score">0</strong></li>
-          </ul>
-          <div>
-            <button id="start-btn">New Game</button>
-            <label id="state">No Game</label>
+        <div class="window" id="tetris-box">
+          <div class="title-bar">
+            <div class="title-bar-text">テトリス</div>
+            <div class="title-bar-controls">
+              <button aria-label="Minimize" onclick="alert('これブラウザだよ?最小化なんてできるわけないじゃん')"></button>
+              <button aria-label="Maximize" onclick="Maximize(document.getElementById('#tetris-titlebar-button', document.getElementById('#tetris-box')))" id="tetris-titlebar-button"></button>
+              <button aria-label="Close" onclick="window.close()"></button>
+            </div>
+          </div>
+          <div class="window-body" id="contener">
+            <canvas id="next-canvas"></canvas>
+            <canvas id="main-canvas"></canvas>
+            <ul>
+              <li>最後に使った技 : <strong id="strong">---</strong></li>
+              <li>落ちたブロック : <strong id="block">0</strong></li>
+              <li>消したラインのスコア : <strong id="line">0</strong></li>
+              <li>総合スコア : <strong id="score">0</strong></li>
+            </ul>
+            <div>
+              <button id="start-btn">New Game</button>
+              <label id="state">No Game</label>
+            </div>
           </div>
         </div>
       </div>

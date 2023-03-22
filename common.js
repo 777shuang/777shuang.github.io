@@ -7,7 +7,7 @@ body.innerHTML = `
     <div class="title-bar-text"><a href="/logo.html"><IMG src="/assets/777shuang.png" height="16px"></a>777shuangの気分的ページ</div>
     <div class="title-bar-controls">
       <button aria-label="Minimize" onclick="alert('これブラウザだよ?最小化なんてできるわけないじゃん')"></button>
-      <button aria-label="Maximize" onclick="Maximize()" id="titlebar_button"></button>
+      <button aria-label="Maximize" onclick="Maximize(document.getElementById('titlebar-button'), body)" id="titlebar-button"></button>
       <button aria-label="Close" onclick="window.close()"></button>
     </div>
   </div>
@@ -25,23 +25,23 @@ body.innerHTML = `
   </footer>
 </div>`
 
-function Maximize()
+function Maximize(button, element)
 {
   if(!(document.fullscreenEnabled || document.mozFullScreenEnabled || document.documentElement.webkitRequestFullScreen || document.msFullscreenEnabled))
   { window.alert("フルスクリーンに対応していません"); }
   else
   {
-    let reqFullScreen = body.requestFullscreen || body.mozRequestFullScreen || body.webkitRequestFullScreen || body.msRequestFullscreen;
-    reqFullScreen.call(body);
-    document.getElementById("titlebar_button").ariaLabel = "Restore";
-    document.getElementById("titlebar_button").onclick = Restore;
+    let reqFullScreen = element.requestFullscreen || element.mozRequestFullScreen || element.webkitRequestFullScreen || element.msRequestFullscreen;
+    reqFullScreen.call(element);
+    button.ariaLabel = "Restore";
+    button.onclick = function() { Restore(button, element) };
   }
 }
-function Restore()
+function Restore(button, element)
 {
   (document.exitFullscreen || document.mozCancelFullScreen || document.webkitExitFullscreen || document.msExitFullscreen).call(document);
-  document.getElementById("titlebar_button").ariaLabel = "Maximize";
-  document.getElementById("titlebar_button").onclick = Maximize
+  button.ariaLabel = "Maximize";
+  button.onclick = function() { Maximize(button, element) }
 }
 
 function changeCSS()
