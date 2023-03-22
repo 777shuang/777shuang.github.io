@@ -14,8 +14,6 @@ body.innerHTML = `
     </div>
 ` + body.innerHTML + `
     <footer>
-      <strong><a href=/index.html>ホームへ戻る</a></strong>
-      <br>
       このサイトは<a href="https://botoxparty.github.io/XP.css/" id="link" target="_blank">XP.css</a>を使って作られています。<button id="changeCSS-button" onclick="changeCSS()">Win98風にする</button>
       <br>
       <a href="https://sites.google.com/site/happybusy/"><img src="/assets/busy_banner.png" height="64px"></a>
