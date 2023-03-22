@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="https://unpkg.com/xp.css" id="xp" />
+        <link rel="stylesheet" href="https://unpkg.com/98.css" disabled=true id="98" />
+        <link rel="stylesheet" href="/common.css" />
+        <title>制作物一覧</title>
+    </head>
+    <body>
+        <section class="tabs" style="max-width: 500px">
+          <menu role="tablist">
+            <button role="tab" onclick="location.href='/index.html'">ホーム</button>
+            <button role="tab" onclick="location.href='/aboutme.html'" >777shuangについて</button>
+            <button role="tab" onclick="location.href='/blog/index.html'">ぶろぐ</button>
+            <button role="tab" onclick="location.href='/work/index.html'" aria-selected="true">制作物</button>
+          </menu>
+        </section>
+        <article role="tabpanel">
+            <div class="main">
+                <h1>制作物一覧</h1>
+                そんなにない。
+                <ul>
+                    <li>
+                        <h2>個人</h2>
+                        <ul>
+                            <li>
+                                <h3><a href="/edufiles/index.html">おべんきょfiles</a></h3>
+                                現実世界で要請があったため作成。
+                            </li>
+                            <li>
+                                <h3><a href="https://github.com/GenkaiSoft/apt-brain" target="_blank">apt-brain</a></h3>
+                                Brain で動くアプリを自動でインストールできるコンソールアプリ。Nim の練習に作った
+                            </li>
+                            <li>
+                                <h3><a href="tetris/index.html">テトリス</a></h3>
+                                どこかのソースをパクって改造したやつ
+                            </li>
+                            <li>
+                                <h3>自作ビジュアルプログラミング環境</h3>
+                                準備中 ...
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>共同制作</h2>
+                        <ul>
+                            <li>
+                                <h3><a href="https://github.com/GenkaiSoft/GenkaiyaReversi" target="_blank">GenkaiyaReversi</a></h3>
+                                <IMG src="http://tmksoft.net/applications/img/genkai2.png" height="256px" />
+                                限界やちゃんがそのまま盤面になったリバーシ。<a href="http://tmksoft.net/index.html">TMK</a> 氏と共同開発。僕は Windows CE 対応などをやりました。
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <script src="/common.js"></script>
+    </body>
+</html>

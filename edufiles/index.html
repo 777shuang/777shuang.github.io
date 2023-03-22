@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang=ja>
  	<head>
-		<META charset=utf-8>
-		<LINK rel=stylesheet href=/common.css>
+		<META charset=utf-8 />
+	    <link rel="stylesheet" href="https://unpkg.com/xp.css" id="xp" />
+	    <link rel="stylesheet" href="https://unpkg.com/98.css" disabled=true id="98" />
+	    <link rel="stylesheet" href="/common.css" />
 		<title>教育用ファイル</title>
 	</head>
 	<body>
-		<div id=main>
-			<p>Last Update : 2022/11/18</p>
-			<h1>落書き集</h1>
-			<strong>筆跡は悪用しないでね</strong>
-			<ul>
-				<li><a href=./function.pdf target=_blank>[数学]関数総合</a></li>
-				<li><a href=./bunshi_and_kankeidaimeishi.pdf target=_blank>[英語]分詞・関係代名詞</a></li>
-				<li><a href=./tenrankainoe.pdf target=_blank>[音楽]展覧会の絵</a></li>
-				<li><a href=./enkinho.pdf target=_blank>[美術]遠近法</a></li>
-				<li><a href=./ion.pdf target=_blank>[理科]イオン</a></li>
-			</ul>
-		</div>
-		<script src=/common.js defer></script>
+		<section class="tabs" style="max-width: 500px">
+		  <menu role="tablist">
+			<button role="tab" onclick="location.href='/index.html'">ホーム</button>
+			<button role="tab" onclick="location.href='/aboutme.html'" >777shuangについて</button>
+			<button role="tab" onclick="location.href='/blog/index.html'">ぶろぐ</button>
+			<button role="tab" onclick="location.href='/work/index.html'" aria-selected="true">制作物</button>
+		  </menu>
+		</section>
+		<article role="tabpanel">
+			<div class=main>
+				<h1>落書き集</h1>
+				<strong>筆跡は悪用しないでね</strong>
+				<ul>
+					<li><a href=./function.pdf target=_blank>[数学]関数総合</a></li>
+					<li><a href=./bunshi_and_kankeidaimeishi.pdf target=_blank>[英語]分詞・関係代名詞</a></li>
+					<li><a href=./tenrankainoe.pdf target=_blank>[音楽]展覧会の絵</a></li>
+					<li><a href=./enkinho.pdf target=_blank>[美術]遠近法</a></li>
+					<li><a href=./ion.pdf target=_blank>[理科]イオン</a></li>
+				</ul>
+			</div>
+		</article>
+		<script src=/common.js></script>
 	</body>
 </html>

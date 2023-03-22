@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/xp.css" id="xp" />
+    <link rel="stylesheet" href="https://unpkg.com/98.css" disabled=true id="98" />
+    <link rel="stylesheet" href="/common.css" />
+    <title>自作テトリス</title>
+
+    <style>
+      table { position: center; }
+
+      #state
+      {
+        background-color: blue;
+        color: white;
+        font-size: 1em;
+      }
+      
+      #contener
+      {
+        position: relative;
+        margin: auto;
+        width: 700px;
+      }
+
+      #next-canvas
+      {
+        position: absolute;
+        top: 0;
+        left: 400px;
+      }
+
+      #img-howto
+      {
+        position: absolute;
+        bottom: 200px;
+        left: 360px;
+      }
+
+      #start-btn
+      {
+        left: 400px;
+        width: 180px;
+        text-align: center;
+        font-size: 16px;
+        padding: 12px 24px;
+        background-size: 200%;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="tabs" style="max-width: 500px">
+      <menu role="tablist">
+        <button role="tab" onclick="location.href='/index.html'">ホーム</button>
+        <button role="tab" onclick="location.href='/aboutme.html'" >777shuangについて</button>
+        <button role="tab" onclick="location.href='/blog/index.html'">ぶろぐ</button>
+        <button role="tab" onclick="location.href='/work/index.html'" aria-selected="true">制作物</button>
+      </menu>
+      </section>
+    <article role="tabpanel">
+      <div class=main>
+        <h1>テキトーに作ってみたテトリス</h1>
+        <p>
+          webプログラミングのお勉強の一環で作りました。
+          <br>
+          解像度によってはうまく表示できないかもしれません。その場合はブラウザ側で表示する大きさを変えてください。
+          <br>
+          <strong>※Tスピン未対応です。</strong>
+        </p>
+        <div id="howto">
+          <h3>操作方法</h3>
+          <table border="1">
+            <tr>
+              <th>動作</th>
+              <th>操作</th>
+            </tr>
+            <tr>
+              <th>左移動</th>
+              <th>←キー</th>
+            </tr>
+            <tr>
+              <th>右移動</th>
+              <th>→キー</th>
+            </tr>
+            <tr>
+              <th>下移動</th>
+              <th>↓キー</th>
+            </tr>
+            <tr>
+              <th>回転</th>
+              <th>スペースキー</th>
+            </tr>
+            <tr>
+              <th>一時停止/再開</th>
+              <th>その他の数字/アルファベットキー</th>
+            </tr>
+          </table>
+        </div>
+        <div id="contener">
+          <canvas id="next-canvas"></canvas>
+          <canvas id="main-canvas"></canvas>
+          <ul>
+            <li>最後に使った技 : <strong id="strong">---</strong></li>
+            <li>落ちたブロック : <strong id="block">0</strong></li>
+            <li>消したラインのスコア : <strong id="line">0</strong></li>
+            <li>総合スコア : <strong id="score">0</strong></li>
+          </ul>
+          <div>
+            <button id="start-btn">New Game</button>
+            <label id="state">No Game</label>
+          </div>
+        </div>
+      </div>
+    </article>
+    <script src=/common.js></script>
+    <script src=tetris.js></script>
+  </body>
+</html>
