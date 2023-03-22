@@ -4,14 +4,16 @@ const body = document.body;
 body.innerHTML = `
 <div class="window">
   <div class="title-bar">
-    <div class="title-bar-text">777shuangの気分的ページ</div>
+    <div class="title-bar-text"><a href="/logo.html"><IMG src="/assets/777shuang.png" height="16px"></a>777shuangの気分的ページ</div>
     <div class="title-bar-controls">
       <button aria-label="Minimize" onclick="alert('これブラウザだよ?最小化なんてできるわけないじゃん')"></button>
       <button aria-label="Maximize" onclick="Maximize()" id="titlebar_button"></button>
       <button aria-label="Close" onclick="window.close()"></button>
     </div>
   </div>
+  <div class="window-body">
 ` + body.innerHTML + `
+  </div>
   <footer>
     このサイトは<a href="https://botoxparty.github.io/XP.css/" id="link" target="_blank">XP.css</a>を使って作られています。<button id="changeCSS-button" onclick="changeCSS()">Win98風にする</button>
     <br>

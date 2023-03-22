@@ -8,41 +8,39 @@
 		<title>777shuangの気分的ぶろぐ</title>
 	</head>
 	<body>
-		<div class="window-body">
-			<section class="tabs" style="max-width: 500px">
-				<menu role="tablist">
-					<button role="tab" onclick="location.href='/index.html'">ホーム</button>
-					<button role="tab" onclick="location.href='/aboutme.html'" >777shuangについて</button>
-					<button role="tab" aria-selected="true" >ぶろぐ</button>
-				</menu>
-			</section>
-			<article role="tabpanel">
-				<div class="main">
-					<h1>777shuangの気分的ぶろぐ</h1>
-					<del>自分のページだと広告を入れる気になれば入れれるんで</del>他のサービスは使わずにHTML直書きです
-					<ul class="tree-view">
-						<li>
-							<details open>
-								<summary>2023年</summary>
-								<ul>
-									<li>
-										<details>
-											<summary>3月</summary>
-											<ul>
-												<li><a href="javascript:void(0)" onclick="show(2023,3,14)">14日</a></li>
-												<li><a href="javascript:void(0)" onclick="show(2023,3,15)">15日</a></li>
-												<li><a href="javascript:void(0)" onclick="show(2023,3,19)">19日</a></li>
-											</ul>
-										</details>
-									</li>
-								</ul>
-							</details>
-						</li>
-					</ul>
-					<div id="blog"></div>
-				</div>
-			</article>
-		</div>
+		<section class="tabs" style="max-width: 500px">
+			<menu role="tablist">
+				<button role="tab" onclick="location.href='/index.html'">ホーム</button>
+				<button role="tab" onclick="location.href='/aboutme.html'" >777shuangについて</button>
+				<button role="tab" aria-selected="true" >ぶろぐ</button>
+			</menu>
+		</section>
+		<article role="tabpanel">
+			<div class="main">
+				<h1>777shuangの気分的ぶろぐ</h1>
+				<del>自分のページだと広告を入れる気になれば入れれるんで</del>他のサービスは使わずにHTML直書きです
+				<ul class="tree-view">
+					<li>
+						<details open>
+							<summary>2023年</summary>
+							<ul>
+								<li>
+									<details>
+										<summary>3月</summary>
+										<ul>
+											<li><a href="javascript:void(0)" onclick="show(2023,3,14)">14日</a></li>
+											<li><a href="javascript:void(0)" onclick="show(2023,3,15)">15日</a></li>
+											<li><a href="javascript:void(0)" onclick="show(2023,3,19)">19日</a></li>
+										</ul>
+									</details>
+								</li>
+							</ul>
+						</details>
+					</li>
+				</ul>
+				<div id="blog"></div>
+			</div>
+		</article>
 		<script src=/common.js></script>
 		<script>
 			function show(year, month, day)
