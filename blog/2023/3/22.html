@@ -1,0 +1,17 @@
+<h3>XP.cssを使えばダサいサイトをなんとかできる話</h3>
+<p>
+    <a href="https://botoxparty.github.io/XP.css/">XP.css</a>とは、WindowsXP風のウィンドウをデザインできる最強のCSSです<br>
+    これさえあればこのサイトみたいにダサいページでもなんとかなります<br>
+    基本的に公式の説明を見とけばいいのですが、TreeViewのところでハマったのでメモ。
+</p>
+<p>
+    説明どおりにTreeViewを組み込むと、▼印が表示されてしまいます。でも、公式の説明ページにはそんな印はない。ソースを読んだところ、CSSで
+    <pre>summary<br/>
+{<br/>
+    user-select: none;<br/>
+    cursor: pointer;<br/>
+    display: inline;<br/>
+}</pre>
+    <br/>
+    というのを宣言すれば消える、ということがわかりました
+</p>
