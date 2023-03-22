@@ -47,6 +47,8 @@
 		<script>
 			function show(year, month, day)
 			{
+				const blog = document.getElementById("blog");
+				blog.innerText = "Now Loading ...";
 				const http = new XMLHttpRequest();
 				const url = "/blog/" + year + '/' + month + '/' + day + ".html";
 				console.log(url);
@@ -59,7 +61,7 @@
 						var text;
 						if (this.status == 200) { text = http.responseText; }
 						else { text = "読み込みに失敗しました"; }
-						document.getElementById("blog").innerHTML = '<h2>' + year + "年 " + month + "月 " + day + "日" + '</h2>' + text;
+						blog.innerHTML = '<h2>' + year + "年 " + month + "月 " + day + "日" + '</h2>' + text;
 					}
 				}
 			}
