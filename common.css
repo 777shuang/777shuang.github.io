@@ -16,7 +16,15 @@ body
 {
     background-color: #5080ff;
 }
-.main { background-color: aquamarine; }
+html, body, .window { height: 99%; }
+.window-body { height: 82%; }
+article { height: 94%; }
+.main
+{
+    height: 99%;
+    overflow: auto;
+    background-color: aquamarine;
+}
 h1
 {
     color: #D800FF;
