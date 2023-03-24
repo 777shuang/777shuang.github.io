@@ -16,12 +16,11 @@ body
 {
     background-color: #5080ff;
 }
-html, body, .window { height: 99%; }
-.window-body { height: 82%; }
-article { height: 94%; }
+div.window { height: 97vh; }
+article { height: 70vh; }
 .main
 {
-    height: 99%;
+    height: 97%;
     overflow: auto;
     background-color: aquamarine;
 }
@@ -36,7 +35,7 @@ h1::after { content: " --"; }
 h2 { color: #FF8700; }
 h3 { color: gray; }
 strong { color: red; }
-footer { text-align: center; }
+fieldset { text-align: center; }
 summary
 {
     user-select: none;
