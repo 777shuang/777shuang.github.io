@@ -1,0 +1,36 @@
+<h3>シェルスクリプトのif文で詰まった話</h3>
+<p>
+    不慣れなシェルスクリプトで「変数strが空なら文字列を代入する」というコードを書こうと思い、以下のようなコードを記述。
+    <pre>
+#!/bin/bash
+
+read -p "answer > " str
+if [$str = ""]; then
+    str="string"
+fi
+echo $str</pre>
+</p>
+<p>
+    実行結果 :
+    <pre>
+$ bash test.sh
+answer > aaa
+test.sh: 行 4: [aaa: コマンドが見つかりません
+aaa</pre>
+</p>
+<p>
+    最後の echo はちゃんと動作してるし、いいんだけどさあ...
+    そんなわけで解決法。
+<pre>
+#!/bin/bash
+
+read -p "answer > " str
+if [ $str = "" ]; then
+    str="string"
+fi
+echo $str</pre>
+</p>
+<p>
+    if 文の [] 野中は、ちゃんとスペースを空けましょう、という話でした<br>
+    シェルスクリプトでは空白が結構大事なんで注意しましょう
+</p>
