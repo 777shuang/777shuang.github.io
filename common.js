@@ -13,7 +13,7 @@ body.innerHTML = `
   </div>
   <div class="window-body">
 ` + body.innerHTML + `
-    <fieldset>
+    <fieldset id="footer">
       <legend><strong>Copyright (c) 2022 - 2023 777shuang. All Rights Reserved.</strong></legend>
       このサイトは<a href="https://botoxparty.github.io/XP.css/" id="link" target="_blank">XP.css</a>を使って作られています。<button id="changeCSS-button" onclick="changeCSS()">Win98風にする</button>
       <br>
